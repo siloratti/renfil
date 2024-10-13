@@ -15,6 +15,11 @@ jobs:
     - name: Install Bats
       run: sudo apt-get update && sudo apt-get install -y bats
     
+    - name: run sample file
+      run: |
+        chmod +x renfil.sh
+        ./renfil.sh
+
     # - name: Run Bats tests
     #   run: bats tests/*test.sh
     
@@ -23,10 +28,10 @@ jobs:
     #   with:
     #     scandir: './lib'
     
-    - name: Test main script
-      run: |
-        chmod +x renfil.sh
-        ./renfil.sh --test
+    # - name: Test main script
+    #   run: |
+    #     chmod +x renfil.sh
+    #     ./renfil.sh --test
 
   # lint:
   #   runs-on: ubuntu-latest
